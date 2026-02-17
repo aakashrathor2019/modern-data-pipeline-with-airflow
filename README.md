@@ -19,3 +19,4 @@ Kafka → Databricks → Airflow
 ## Validation
 - Check review counts and avg ratings between Silver and Gold
 - Validate city metrics aggregation
+# modern-data-pipeline-with-airflow
