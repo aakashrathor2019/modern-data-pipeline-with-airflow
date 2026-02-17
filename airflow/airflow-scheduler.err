@@ -1,0 +1,218 @@
+[2026-02-16 15:28:18 +0530] [23253] [INFO] Starting gunicorn 21.2.0
+[2026-02-16 15:28:18 +0530] [23253] [INFO] Listening at: http://[::]:8793 (23253)
+[2026-02-16 15:28:18 +0530] [23253] [INFO] Using worker: sync
+[2026-02-16 15:28:18 +0530] [23254] [INFO] Booting worker with pid: 23254
+[2026-02-16 15:28:18 +0530] [23256] [INFO] Booting worker with pid: 23256
+Process ForkProcess-2:
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/dag_processing/manager.py", line 240, in _run_processor_manager
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/dag_processing/manager.py", line 475, in start
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/dag_processing/manager.py", line 602, in _run_parsing_loop
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/api_internal/internal_api_call.py", line 114, in wrapper
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/models/dagwarning.py", line 81, in purge_inactive_dag_warnings
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/retries.py", line 91, in wrapped_function
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 347, in __iter__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 325, in iter
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 158, in reraise
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/retries.py", line 100, in wrapped_function
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/models/dagwarning.py", line 94, in _purge_inactive_dag_warnings_with_retry
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+[2026-02-16 19:02:49 +0530] [23253] [INFO] Handling signal: term
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+[2026-02-16 19:02:49 +0530] [23256] [INFO] Worker exiting (pid: 23256)
+[2026-02-16 19:02:49 +0530] [23254] [INFO] Worker exiting (pid: 23254)
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/job.py", line 393, in run_job
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/job.py", line 422, in execute_job
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 855, in _execute
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 987, in _run_scheduler_loop
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 1061, in _do_scheduling
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/retries.py", line 91, in wrapped_function
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 347, in __iter__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 325, in iter
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 158, in reraise
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/retries.py", line 100, in wrapped_function
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 1127, in _create_dagruns_for_dags
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/models/dag.py", line 3742, in dags_needing_dagruns
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/cli/commands/daemon_utils.py", line 81, in run_command_with_daemon_option
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/cli/commands/scheduler_command.py", line 70, in <lambda>
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/cli/commands/scheduler_command.py", line 52, in _run_scheduler_job
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/job.py", line 395, in run_job
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/job.py", line 240, in complete_execution
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/api_internal/internal_api_call.py", line 114, in wrapper
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/job.py", line 332, in _update_in_db
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3056, in merge
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3136, in _merge
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2853, in get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2975, in _get_impl
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/loading.py", line 530, in load_on_pk_identity
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/bin/airflow", line 8, in <module>
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/__main__.py", line 57, in main
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/cli/cli_config.py", line 49, in command
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/cli.py", line 114, in wrapper
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/providers_configuration_loader.py", line 55, in wrapped_function
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/cli/commands/scheduler_command.py", line 67, in scheduler
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/cli/commands/daemon_utils.py", line 81, in run_command_with_daemon_option
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/daemon/daemon.py", line 397, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/daemon/daemon.py", line 391, in close
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/lockfile/__init__.py", line 204, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/lockfile/pidlockfile.py", line 103, in release
+lockfile.NotLocked: /home/my/yelp_data_engineering_project/airflow/airflow-scheduler.pid is not locked
+[2026-02-16 19:02:49 +0530] [23253] [INFO] Shutting down: Master
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/daemon/daemon.py", line 391, in close
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/lockfile/__init__.py", line 204, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/lockfile/pidlockfile.py", line 103, in release
+lockfile.NotLocked: /home/my/yelp_data_engineering_project/airflow/airflow-scheduler.pid is not locked

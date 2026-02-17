@@ -1,0 +1,273 @@
+[[34m2026-02-16T15:28:18.660+0530[0m] {[34mtask_context_logger.py:[0m63} INFO[0m - Task context logging is enabled[0m
+[[34m2026-02-16T15:28:18.661+0530[0m] {[34mexecutor_loader.py:[0m115} INFO[0m - Loaded executor: SequentialExecutor[0m
+[[34m2026-02-16T15:28:18.682+0530[0m] {[34mscheduler_job_runner.py:[0m808} INFO[0m - Starting the scheduler[0m
+[[34m2026-02-16T15:28:18.683+0530[0m] {[34mscheduler_job_runner.py:[0m815} INFO[0m - Processing each file at most -1 times[0m
+[[34m2026-02-16T15:28:18.687+0530[0m] {[34mmanager.py:[0m169} INFO[0m - Launched DagFileProcessorManager with pid: 23255[0m
+[[34m2026-02-16T15:28:18.688+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T15:28:18.769+0530[0m] {[34msettings.py:[0m60} INFO[0m - Configured default timezone UTC[0m
+[[34m2026-02-16T15:28:18.774+0530[0m] {[34mscheduler_job_runner.py:[0m1642} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[2026-02-16T15:28:18.790+0530] {manager.py:392} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2026-02-16T15:28:19.565+0530[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: kafka_ingestion.publish_to_kafka manual__2026-02-16T05:29:44.060395+00:00 [scheduled]>[0m
+[[34m2026-02-16T15:28:19.565+0530[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG kafka_ingestion has 0/16 running and queued tasks[0m
+[[34m2026-02-16T15:28:19.565+0530[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: kafka_ingestion.publish_to_kafka manual__2026-02-16T05:29:44.060395+00:00 [scheduled]>[0m
+[[34m2026-02-16T15:28:19.567+0530[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='kafka_ingestion', task_id='publish_to_kafka', run_id='manual__2026-02-16T05:29:44.060395+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2026-02-16T15:28:19.568+0530[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'kafka_ingestion', 'publish_to_kafka', 'manual__2026-02-16T05:29:44.060395+00:00', '--local', '--subdir', 'DAGS_FOLDER/ingestion_dag.py'][0m
+[[34m2026-02-16T15:28:19.570+0530[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'kafka_ingestion', 'publish_to_kafka', 'manual__2026-02-16T05:29:44.060395+00:00', '--local', '--subdir', 'DAGS_FOLDER/ingestion_dag.py'][0m
+[[34m2026-02-16T15:28:20.698+0530[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/my/yelp_data_engineering_project/airflow/dags/ingestion_dag.py[0m
+[[34m2026-02-16T15:28:20.724+0530[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: kafka_ingestion.publish_to_kafka manual__2026-02-16T05:29:44.060395+00:00 [queued]> on host my-Latitude-5400[0m
+[[34m2026-02-16T15:28:21.262+0530[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='kafka_ingestion', task_id='publish_to_kafka', run_id='manual__2026-02-16T05:29:44.060395+00:00', try_number=2, map_index=-1)[0m
+[[34m2026-02-16T15:28:21.274+0530[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=kafka_ingestion, task_id=publish_to_kafka, run_id=manual__2026-02-16T05:29:44.060395+00:00, map_index=-1, run_start_date=2026-02-16 09:58:20.749345+00:00, run_end_date=2026-02-16 09:58:20.944245+00:00, run_duration=0.1949, state=up_for_retry, executor_state=success, try_number=2, max_tries=2, job_id=13, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2026-02-16 09:58:19.566166+00:00, queued_by_job_id=12, pid=23306[0m
+[[34m2026-02-16T15:33:18.840+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T15:33:21.032+0530[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: kafka_ingestion.publish_to_kafka manual__2026-02-16T05:29:44.060395+00:00 [scheduled]>[0m
+[[34m2026-02-16T15:33:21.032+0530[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG kafka_ingestion has 0/16 running and queued tasks[0m
+[[34m2026-02-16T15:33:21.032+0530[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: kafka_ingestion.publish_to_kafka manual__2026-02-16T05:29:44.060395+00:00 [scheduled]>[0m
+[[34m2026-02-16T15:33:21.034+0530[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='kafka_ingestion', task_id='publish_to_kafka', run_id='manual__2026-02-16T05:29:44.060395+00:00', try_number=3, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2026-02-16T15:33:21.034+0530[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'kafka_ingestion', 'publish_to_kafka', 'manual__2026-02-16T05:29:44.060395+00:00', '--local', '--subdir', 'DAGS_FOLDER/ingestion_dag.py'][0m
+[[34m2026-02-16T15:33:21.036+0530[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'kafka_ingestion', 'publish_to_kafka', 'manual__2026-02-16T05:29:44.060395+00:00', '--local', '--subdir', 'DAGS_FOLDER/ingestion_dag.py'][0m
+[[34m2026-02-16T15:33:22.256+0530[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/my/yelp_data_engineering_project/airflow/dags/ingestion_dag.py[0m
+[[34m2026-02-16T15:33:22.280+0530[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: kafka_ingestion.publish_to_kafka manual__2026-02-16T05:29:44.060395+00:00 [queued]> on host my-Latitude-5400[0m
+[[34m2026-02-16T15:33:22.815+0530[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='kafka_ingestion', task_id='publish_to_kafka', run_id='manual__2026-02-16T05:29:44.060395+00:00', try_number=3, map_index=-1)[0m
+[[34m2026-02-16T15:33:22.822+0530[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=kafka_ingestion, task_id=publish_to_kafka, run_id=manual__2026-02-16T05:29:44.060395+00:00, map_index=-1, run_start_date=2026-02-16 10:03:22.314375+00:00, run_end_date=2026-02-16 10:03:22.519373+00:00, run_duration=0.204998, state=failed, executor_state=success, try_number=3, max_tries=2, job_id=14, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2026-02-16 10:03:21.033403+00:00, queued_by_job_id=12, pid=24911[0m
+[[34m2026-02-16T15:33:22.862+0530[0m] {[34mdagrun.py:[0m711} ERROR[0m - Marking run <DagRun kafka_ingestion @ 2026-02-16 05:29:44.060395+00:00: manual__2026-02-16T05:29:44.060395+00:00, state:running, queued_at: 2026-02-16 05:29:44.068694+00:00. externally triggered: True> failed[0m
+[[34m2026-02-16T15:33:22.863+0530[0m] {[34mdagrun.py:[0m783} INFO[0m - DagRun Finished: dag_id=kafka_ingestion, execution_date=2026-02-16 05:29:44.060395+00:00, run_id=manual__2026-02-16T05:29:44.060395+00:00, run_start_date=2026-02-16 05:29:45.966988+00:00, run_end_date=2026-02-16 10:03:22.863232+00:00, run_duration=16416.896244, state=failed, external_trigger=True, run_type=manual, data_interval_start=2026-02-16 05:29:44.060395+00:00, data_interval_end=2026-02-16 05:29:44.060395+00:00, dag_hash=34d38473c48e61410ab6a7fac3fde2a6[0m
+[[34m2026-02-16T15:38:18.930+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T15:43:18.975+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T15:48:19.179+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T15:53:19.256+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T15:58:19.305+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:03:19.383+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:08:19.452+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:13:19.494+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:18:19.569+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:23:19.627+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:28:20.060+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:33:20.099+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:38:20.175+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:43:20.211+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:48:20.248+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:53:20.275+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T16:58:20.331+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:03:20.394+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:08:20.460+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:13:20.614+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:18:20.673+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:23:20.711+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:28:20.771+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:33:20.806+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:38:20.840+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:43:20.907+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:48:20.939+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:53:20.996+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T17:58:21.068+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:03:21.145+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:08:21.214+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:13:21.279+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:18:21.322+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:23:21.386+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:28:21.427+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:33:21.537+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:37:50.136+0530[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: kafka_ingestion.publish_to_kafka manual__2026-02-16T13:02:46.840886+00:00 [scheduled]>[0m
+[[34m2026-02-16T18:37:50.136+0530[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG kafka_ingestion has 0/16 running and queued tasks[0m
+[[34m2026-02-16T18:37:50.136+0530[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: kafka_ingestion.publish_to_kafka manual__2026-02-16T13:02:46.840886+00:00 [scheduled]>[0m
+[[34m2026-02-16T18:37:50.139+0530[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='kafka_ingestion', task_id='publish_to_kafka', run_id='manual__2026-02-16T13:02:46.840886+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2026-02-16T18:37:50.139+0530[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'kafka_ingestion', 'publish_to_kafka', 'manual__2026-02-16T13:02:46.840886+00:00', '--local', '--subdir', 'DAGS_FOLDER/ingestion_dag.py'][0m
+[[34m2026-02-16T18:37:50.141+0530[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'kafka_ingestion', 'publish_to_kafka', 'manual__2026-02-16T13:02:46.840886+00:00', '--local', '--subdir', 'DAGS_FOLDER/ingestion_dag.py'][0m
+[[34m2026-02-16T18:37:51.529+0530[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /home/my/yelp_data_engineering_project/airflow/dags/ingestion_dag.py[0m
+[[34m2026-02-16T18:37:51.558+0530[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: kafka_ingestion.publish_to_kafka manual__2026-02-16T13:02:46.840886+00:00 [queued]> on host my-Latitude-5400[0m
+[[34m2026-02-16T18:37:52.245+0530[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='kafka_ingestion', task_id='publish_to_kafka', run_id='manual__2026-02-16T13:02:46.840886+00:00', try_number=2, map_index=-1)[0m
+[[34m2026-02-16T18:37:52.253+0530[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=kafka_ingestion, task_id=publish_to_kafka, run_id=manual__2026-02-16T13:02:46.840886+00:00, map_index=-1, run_start_date=2026-02-16 13:07:51.606201+00:00, run_end_date=2026-02-16 13:07:51.839063+00:00, run_duration=0.232862, state=up_for_retry, executor_state=success, try_number=2, max_tries=2, job_id=18, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2026-02-16 13:07:50.137439+00:00, queued_by_job_id=12, pid=90372[0m
+[[34m2026-02-16T18:38:21.589+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:43:21.751+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:48:21.816+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:53:21.845+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T18:58:21.893+0530[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2026-02-16T19:02:49.184+0530[0m] {[34mscheduler_job_runner.py:[0m872} ERROR[0m - Exception when executing SchedulerJob._run_scheduler_loop[0m
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 855, in _execute
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 987, in _run_scheduler_loop
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 1061, in _do_scheduling
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/retries.py", line 91, in wrapped_function
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 347, in __iter__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 325, in iter
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 158, in reraise
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/retries.py", line 100, in wrapped_function
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 1127, in _create_dagruns_for_dags
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/models/dag.py", line 3742, in dags_needing_dagruns
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)[0m
+[[34m2026-02-16T19:02:49.200+0530[0m] {[34mprocess_utils.py:[0m131} INFO[0m - Sending Signals.SIGTERM to group 23255. PIDs of all processes in the group: [][0m
+[[34m2026-02-16T19:02:49.201+0530[0m] {[34mprocess_utils.py:[0m86} INFO[0m - Sending the signal Signals.SIGTERM to group 23255[0m
+[[34m2026-02-16T19:02:49.201+0530[0m] {[34mprocess_utils.py:[0m100} INFO[0m - Sending the signal Signals.SIGTERM to process 23255 as process group is missing.[0m
+[[34m2026-02-16T19:02:49.201+0530[0m] {[34mscheduler_job_runner.py:[0m884} INFO[0m - Exited execute loop[0m
+[[34m2026-02-16T19:02:49.202+0530[0m] {[34mscheduler_command.py:[0m54} ERROR[0m - Exception when running scheduler job[0m
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/job.py", line 393, in run_job
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/job.py", line 422, in execute_job
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 855, in _execute
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 987, in _run_scheduler_loop
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 1061, in _do_scheduling
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/retries.py", line 91, in wrapped_function
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 347, in __iter__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 325, in iter
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/tenacity/__init__.py", line 158, in reraise
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/retries.py", line 100, in wrapped_function
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/scheduler_job_runner.py", line 1127, in _create_dagruns_for_dags
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/models/dag.py", line 3742, in dags_needing_dagruns
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/cli/commands/scheduler_command.py", line 52, in _run_scheduler_job
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/job.py", line 395, in run_job
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/job.py", line 240, in complete_execution
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/api_internal/internal_api_call.py", line 114, in wrapper
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/airflow/jobs/job.py", line 332, in _update_in_db
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3056, in merge
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3136, in _merge
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2853, in get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2975, in _get_impl
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/loading.py", line 530, in load_on_pk_identity
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/my/yelp_data_engineering_project/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)[0m

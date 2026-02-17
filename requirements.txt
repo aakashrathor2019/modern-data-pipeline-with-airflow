@@ -1,0 +1,13 @@
+# Kafka
+kafka-python==2.0.2
+
+# Airflow
+apache-airflow==2.7.1
+apache-airflow-providers-databricks==3.3.0
+
+# PySpark + Delta
+pyspark==3.5.1
+delta-spark==3.3.2
+
+# Utilities
+pandas==2.0.3
